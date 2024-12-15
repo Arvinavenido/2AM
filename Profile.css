@@ -1,0 +1,139 @@
+/* Profile page layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7fc;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Profile container and header */
+.profile-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Profile information card */
+.profile-info {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info .info-card p {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Edit button */
+.edit-button {
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #141516;
+  color: rgb(231, 155, 24);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.edit-button:hover {
+  background-color: #060606;
+}
+
+/* Back to dashboard button */
+.back-button {
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #2e3031;
+  color: rgb(225, 124, 16);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.back-button:hover {
+  background-color: #0e0d0d;
+}
+
+/* Form for editing profile */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-form label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.edit-form input,
+.edit-form select {
+  padding: 12px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.update-button {
+  padding: 12px 24px;
+  background-color: #0b0b0b;
+  color: rgb(230, 144, 23);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+.update-button:hover {
+  background-color: #1a1a1a;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 15px;
+    margin: 10px;
+  }
+  .profile-header h2 {
+    font-size: 1.8rem;
+  }
+  .profile-info .info-card p {
+    font-size: 1.2rem;
+  }
+}

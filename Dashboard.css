@@ -1,0 +1,123 @@
+/* Fullscreen Dashboard Container */
+.dashboard-container {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.dashboard-container.sidebar-hidden {
+  padding-left: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Sidebar width */
+  height: 100%;
+  background-color: #2c3e50; /* Sidebar background color */
+  color: white;
+  padding-top: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease;
+}
+
+.sidebar.hidden {
+  width: 0; /* Hide the sidebar when needed */
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #101112;
+}
+
+.sidebar a.active {
+  background-color: #f0a83e;
+}
+
+/* Main Content */
+.dashboard-content {
+  margin-left: 250px; /* Space for the sidebar */
+  width: calc(100vw - 250px); /* Remaining space after sidebar */
+  padding: 40px;
+  background-color: #0e1924; /* Clean white background */
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  min-height: 70vh;
+  transition: margin-left 0.3s ease;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.health-quote {
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #7f8c8d;
+  margin-top: 40px;
+}
+
+.health-quote p {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative; /* Make sidebar non-fixed on smaller screens */
+  }
+
+  .dashboard-content {
+    margin-left: 0; /* Remove margin-left when sidebar is at top */
+    width: 100%; /* Make the content take full width */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .dashboard-header h2 {
+    font-size: 2rem;
+  }
+
+  .health-quote p {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+}
